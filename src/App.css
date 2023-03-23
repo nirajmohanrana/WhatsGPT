@@ -24,21 +24,3 @@ body {
     height: 85vh;
   }
 }
-
-.sysType {
-  display: flex;
-  justify-content: end;
-  margin-top: 10px;
-  width: 90vw;
-}
-
-.sysType button {
-  margin: 4px;
-  padding: 1px;
-  border: 1px solid #6ea9d7;
-  border-radius: 5px;
-  font-size: smaller;
-  font-weight: bolder;
-  background-color: #c6e3fa;
-  cursor: pointer;
-}

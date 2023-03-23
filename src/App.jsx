@@ -10,14 +10,10 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
-const API_Key = "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";
+const API_Key = "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";
 
 function App() {
   const [tpying, setTyping] = useState(false);
-
-  const [sysContent, setSysContent] = useState(
-    "Explain all concept like I am 10 year old"
-  );
 
   const [messages, setMessages] = useState([
     {
@@ -55,7 +51,7 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content: sysContent,
+      content: "Explain all concept like I am 10 year old",
     };
 
     const apiRequestBody = {
@@ -75,6 +71,7 @@ function App() {
         return data.json();
       })
       .then((data) => {
+        console.log(data);
         setMessages([
           ...chatMessages,
           {
@@ -107,31 +104,6 @@ function App() {
             />
           </ChatContainer>
         </MainContainer>
-      </div>
-      <div className="sysType">
-        <button
-          onClick={() => {
-            setSysContent("Explain all concept like I am 10 year old");
-          }}
-        >
-          I am 10 Year Old
-        </button>
-        <button
-          onClick={() => {
-            setSysContent("Speak like a pirate");
-          }}
-        >
-          I am a Pirate Captain
-        </button>
-        <button
-          onClick={() => {
-            setSysContent(
-              "Explain all concept like I have 5 years of experience"
-            );
-          }}
-        >
-          I am an Experienced Engineer
-        </button>
       </div>
     </div>
   );
