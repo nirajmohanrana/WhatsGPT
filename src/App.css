@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.ChatDiv {
+  position: relative;
+  width: 95vw;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 320px) {
+  .ChatDiv {
+    width: 90vw;
+    height: 85vh;
+  }
+}
+
+.sysType {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  width: 90vw;
+}
+
+.sysType button {
+  margin: 4px;
+  padding: 1px;
+  border: 1px solid #6ea9d7;
+  border-radius: 5px;
+  font-size: smaller;
+  font-weight: bolder;
+  background-color: #c6e3fa;
+  cursor: pointer;
+}
